@@ -118,7 +118,7 @@ jobs:
           name: ${{ steps.get_name.outputs.NAME }}-${{ github.sha }}.macOS-${{ matrix.arch }}.qt${{ matrix.qt_version }}.dylib
           path: build/lib${{ steps.get_name.outputs.NAME }}.dylib
       - name: macOS - ${{ matrix.qt_version }} - Upload binaries to release
-        uses: svenstaro/upload-release-action@v1-release
+        uses: svenstaro/upload-release-action@v2.5.0
         if: github.event_name == 'release' && matrix.platform == 'macos-latest'
         with:
           repo_token: ${{ secrets.TOKEN }}
