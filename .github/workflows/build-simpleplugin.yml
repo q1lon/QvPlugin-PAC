@@ -121,7 +121,7 @@ jobs:
         uses: svenstaro/upload-release-action@v1-release
         if: github.event_name == 'release' && matrix.platform == 'macos-latest'
         with:
-          repo_token: ${{ secrets.GITHUB_TOKEN }}
+          repo_token: ${{ secrets.TOKEN }}
           file: build/lib${{ steps.get_name.outputs.NAME }}.dylib
           asset_name: ${{ steps.get_name.outputs.NAME }}.${{ steps.get_version.outputs.VERSION }}.macOS-${{ matrix.arch }}.dylib
           tag: ${{ github.ref }}
