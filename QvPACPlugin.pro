@@ -1,7 +1,8 @@
 TEMPLATE = lib
 QT += network widgets gui
 CONFIG += qt plugin c++14
-
+QMAKE_EXTENSION_SHLIB = bundle
+QMAKE_PREFIX_SHLIB = so
 include(interface/QvPluginInterface.pri)
 
 HEADERS += \
