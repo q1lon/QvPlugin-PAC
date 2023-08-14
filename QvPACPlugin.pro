@@ -4,6 +4,7 @@ CONFIG += qt plugin c++14
 
 QMAKE_LFLAGS_PLUGIN -= -dynamiclib 
 QMAKE_LFLAGS_PLUGIN += -bundle 
+QMAKE_EXTENSION_SHLIB = bundle
 QMAKE_PREFIX_SHLIB = so
 
 include(interface/QvPluginInterface.pri)
